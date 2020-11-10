@@ -1,0 +1,30 @@
+{
+  "name": "delta_painting_inc_backend",
+  "version": "1.0.0",
+  "description": "Backend Database for Delta Painting Inc. Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JGeorgos24/Delta_Painting_Inc_Backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JGeorgos24/Delta_Painting_Inc_Backend/issues"
+  },
+  "homepage": "https://github.com/JGeorgos24/Delta_Painting_Inc_Backend#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "method-override": "^3.0.0",
+    "pg": "^8.5.0",
+    "sequelize": "^6.3.5"
+  }
+}
