@@ -2,7 +2,7 @@
   "name": "delta_painting_inc_backend",
   "version": "1.0.0",
   "description": "Backend Database for Delta Painting Inc. Website",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,8 +17,10 @@
   },
   "homepage": "https://github.com/JGeorgos24/Delta_Painting_Inc_Backend#readme",
   "dependencies": {
+    "bcrypt": "^5.0.0",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
