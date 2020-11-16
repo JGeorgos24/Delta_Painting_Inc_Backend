@@ -29,7 +29,7 @@ if (process.env.DATABASE_URL) {
     }
   })
 } else {
-  const sequelize = new Sequelize(DB_NAME, DB_USER, DB_PASS, config);
+  sequelize = new Sequelize(DB_NAME, DB_USER, DB_PASS, config);
 }
 // let sequelize;
 // if (config.use_env_variable) {
