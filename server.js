@@ -11,7 +11,7 @@ const constants = require('./constants');
 
 const corsOptions = {
     // origin: ['http://localhost:3000'],
-    origin: ['DeltaPaintingInc.surge.sh'],
+    origin: ['https://DeltaPaintingInc.surge.sh'],
     methods: "GET,POST,PUT,DELETE",
     credentials: true, //allows session cookies to be sent back and forth
     optionsSuccessStatus: 200 //legacy browsers
