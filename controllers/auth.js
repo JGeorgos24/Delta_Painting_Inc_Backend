@@ -50,6 +50,7 @@ const login = (req, res) => {
         }
     })
     .then(foundUser => {
+        console.log("FOUND A USER")
         if(foundUser){
             bcrypt.compare(req.body.password, foundUser.password, (err, match) => {
                 if(match){
@@ -69,17 +70,25 @@ const login = (req, res) => {
                         "user": foundUser
                     });
                 } else {
-                    res.status(constants.BAD_REQUEST).send(`ERROR: Incorrect Username/Password`);
+                    // res.status(constants.BAD_REQUEST).send(`ERROR: Incorrect Username/Password`);
+                    res.status(constants.BAD_REQUEST).json({"ERROR": "Incorrect Username/Password"});
                 }
             })
         }
         else{
-            res.status(constants.BAD_REQUEST).send(`ERROR: Incorrect Username/Password`);
+            console.log("WRONG USERNAME")
+            res.status(constants.SUCCESS).json({ERROR: "Incorrect Username/Password"});
+            res.status(constants.BAD_REQUEST).json({ERROR: "Incorrect Username/Password"});
+
+            // res.status(constants.BAD_REQUEST).send(`ERROR: Incorrect Username/Password`);
+            
         }
     })
     .catch(err => {
         console.log(err)
-        res.status(constants.INTERNAL_SERVER_ERROR).send(`ERROR: ${err}`);
+        res.status(constants.BAD_REQUEST).json({"ERROR": "Incorrect Username/Password"});
+        
+        // res.status(constants.INTERNAL_SERVER_ERROR).send(`ERROR: ${err}`);
     })
 }
 
@@ -91,7 +100,8 @@ const verifyUser = (req, res) => {
         res.status(constants.SUCCESS).json(foundUser);
     })
     .catch(err => {
-        res.status(constants.INTERNAL_SERVER_ERROR).send(`ERROR: ${err}`);
+        res.status(constants.BAD_REQUEST).json({"ERROR": "Incorrect Username/Password"});
+        // res.status(constants.INTERNAL_SERVER_ERROR).send(`ERROR: ${err}`);
     })
 }
 
