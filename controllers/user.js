@@ -1,6 +1,4 @@
 const User = require('../models').User;
-const City = require('../models').City;
-const Post = require('../models').Post;
 
 const constants = require('../constants');
 
