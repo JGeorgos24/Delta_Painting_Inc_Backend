@@ -77,9 +77,7 @@ const login = (req, res) => {
         else{
             console.log("WRONG USERNAME")
             res.status(constants.SUCCESS).json({ERROR: "Incorrect Username/Password"});
-            res.status(constants.BAD_REQUEST).json({ERROR: "Incorrect Username/Password"});
-            
-            
+            res.status(constants.BAD_REQUEST).json({ERROR: "Incorrect Username/Password"});   
         }
     })
     .catch(err => {

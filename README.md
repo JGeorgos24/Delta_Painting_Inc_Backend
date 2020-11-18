@@ -61,6 +61,10 @@ The functionality of my website will be broken down into separate list: MVP and 
 
 
 #### Explanations of Technologies Used and Installation Instructions
+- React
+- PostgressSQL
+- EmailJS
+
 A new technology that I learned and used during this project was a package called EmailJS. This package allowed for me to be able to send an email with the content of what a user typed into my input boxes on my website. To install this package I had to run "$ npm install emailjs-com --save" in my terminal then call upon it properly in my code when I wanted to use it. There was also a certain form I had to follow and setup so that the function that would send the email would run correctly.  
 
 
